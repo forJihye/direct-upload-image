@@ -8,6 +8,64 @@
   <link rel="stylesheet" href="./dist/index.css">
 </head>
 <body>
+  <div id="route-intro" class="page">
+    <div class="wrap">
+      <div class="message">화면 클릭 후<br/> <span>업로드할 사진</span>을 선택해주세요.</div>
+    </div>
+  </div>
+  <div id="route-edit" class="page">
+    <div class="wrap">
+      <div class="edit-box">
+        <canvas id="image-canvas"></canvas>
+        <div class="edit-btns">
+          <button id="image-upload" class="btn">upload</button>
+          <button id="image-rotate" class="btn"></button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div id="route-ending" class="page">
+    <div class="wrap">
+      <p class="message">사진이 <span>업로드</span> 되었습니다.</p>
+    </div>
+  </div>
+
+  <div id="popup-upload-error" class="popup">
+    <div class="wrap">
+      <div class="icon error">
+        <span class="error-mark"></span>
+      </div>
+      <p>업로드 실패<br>다시 시도해주세요.</p>
+    </div>
+  </div>
+  <div id="popup-image-warn" class="popup">
+    <div class="wrap">
+      <div class="icon warning">
+        <span class="warning-mark"></span>
+      </div>
+      <p>이미지 파일만 가능합니다.</p>
+    </div>
+  </div>
+  <div id="popup-image-upload" class="popup">
+    <div class="wrap">
+      <div class="icon loader-spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+
   <script src="./dist/index.js"></script>
 </body>
 </html>
