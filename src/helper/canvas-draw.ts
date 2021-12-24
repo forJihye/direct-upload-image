@@ -17,15 +17,14 @@ export const rotateDraw = (ctx: CanvasRenderingContext2D) => {
   });
   rctx.drawImage(ctx.canvas, 0, 0);
 
-  Object.assign(ctx.canvas, {
-    width: rcanvas.width,
-    height: rcanvas.height
+  Object.assign(ctx.canvas, { // 90도 회전이라서 width , height 뒤바뀜
+    width: rcanvas.height,
+    height: rcanvas.width
   });
 
   ctx.save();
-  ctx.translate(rcanvas.width/2, rcanvas.height/2);
+  ctx.translate(ctx.canvas.width, 0);
   ctx.rotate(Math.PI / 180 * 90);
-  ctx.translate(-rcanvas.width/2, -rcanvas.height/2);
   ctx.drawImage(rcanvas, 0, 0);
   ctx.restore();
 }
